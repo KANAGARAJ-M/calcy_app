@@ -1,47 +1,32 @@
-import 'package:flutter/material.dart';
-import 'calculator.dart';
+// lib/main.dart
 
-void main() => runApp(MyApp());
+import 'package:flutter/material.dart';
+import 'screens/home_screen.dart';
+import 'screens/calculator_screen.dart';
+import 'screens/currency_converter_screen.dart';
+import 'screens/notes_screen.dart';
+import 'screens/android_details_screen.dart';
+
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Calculator & Currency Converter',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      debugShowCheckedModeBanner: false,
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Calculator',
-          style: TextStyle(color: Colors.white),
-        ),
-        actions: [
-          IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.currency_exchange,
-                semanticLabel: 'Currency Converter',
-                color: Colors.white,
-              ))
-        ],
-        backgroundColor: Colors.black,
+      title: 'Calculator & Tools',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
-      body: Column(
-        children: [
-          Expanded(child: Calculator()),
-          // Divider(height: 1),
-          // Expanded(child: CurrencyConverter()),
-        ],
-      ),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomeScreen(),
+        '/calculator': (context) => CalculatorScreen(),
+        '/currency-converter': (context) => CurrencyConverterScreen(),
+        '/notes': (context) => NotesScreen(),
+        '/android-details': (context) => AndroidDetailsScreen(),
+      },
     );
   }
 }
