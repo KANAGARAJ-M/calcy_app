@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 
 class MobileCalculatorScreen extends StatefulWidget {
+  const MobileCalculatorScreen({super.key});
+
   @override
   _MobileCalculatorScreenState createState() => _MobileCalculatorScreenState();
 }
@@ -71,19 +73,19 @@ class _MobileCalculatorScreenState extends State<MobileCalculatorScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Calculator (Mobile)"),
+        title: const Text("Calculator (Mobile)"),
       ),
       body: Column(
         children: <Widget>[
           Container(
             alignment: Alignment.centerRight,
-            padding: EdgeInsets.symmetric(vertical: 24, horizontal: 12),
+            padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 12),
             child: Text(
               output,
-              style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
             ),
           ),
-          Expanded(
+          const Expanded(
             child: Divider(),
           ),
           Column(

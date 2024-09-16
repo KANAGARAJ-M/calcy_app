@@ -5,6 +5,8 @@ import 'mobile_calculator_screen.dart';
 import 'tablet_calculator_screen.dart';
 
 class CalculatorScreen extends StatelessWidget {
+  const CalculatorScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(

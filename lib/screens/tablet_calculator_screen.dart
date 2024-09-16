@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 
 class TabletCalculatorScreen extends StatefulWidget {
+  const TabletCalculatorScreen({super.key});
+
   @override
   _TabletCalculatorScreenState createState() => _TabletCalculatorScreenState();
 }
@@ -64,8 +66,8 @@ class _TabletCalculatorScreenState extends State<TabletCalculatorScreen> {
         backgroundColor: Colors.blue,
         elevation: 5,
         clipBehavior: Clip.antiAliasWithSaveLayer,
-        focusColor: Color.fromARGB(255, 0, 255, 76),
-        hoverColor: Color.fromRGBO(0, 241, 253, 0.808),
+        focusColor: const Color.fromARGB(255, 0, 255, 76),
+        hoverColor: const Color.fromRGBO(0, 241, 253, 0.808),
         // autofocus: true,
         mouseCursor: SystemMouseCursors.click,
         child: Text(buttonText),
@@ -78,19 +80,19 @@ class _TabletCalculatorScreenState extends State<TabletCalculatorScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Calculator (Tablet)"),
+        title: const Text("Calculator (Tablet)"),
       ),
       body: Column(
         children: <Widget>[
           Container(
             alignment: Alignment.centerRight,
-            padding: EdgeInsets.symmetric(vertical: 24, horizontal: 12),
+            padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 12),
             child: Text(
               output,
-              style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
             ),
           ),
-          Expanded(
+          const Expanded(
             child: Divider(),
           ),
           Column(
